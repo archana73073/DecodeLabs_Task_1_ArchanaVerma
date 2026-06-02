@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        color: #333;
+        /* line-height: 1.6; */
+    }
+    header{
+        background: #287460;
+        padding: 15px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+    header he{
+        font-size: 22px;
+    }
+    .search-bar input{
+        padding: 8px;
+        width: 300px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .categories{
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background:#fff;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,1.2);
+    }
+    .categories div{
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .categories div:hover{
+        transform: scale(1.1);
+    }
+    .categories img{
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5px;
+    }
+    .products{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px , 1fr));
+        gap: 20px;
+        padding: 40px;
+    }
+    .card{
+        background:#fff;
+        border-radius: 8px;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    .card:hover{
+        transform:scale(1.05);
+    }
+    .card img{
+        width: 150px;
+        height: 120px;
+        object-fit: cover;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+    .card h3{
+        margin-bottom: 10px;
+    }
+    .card p{
+        margin: 5px 0;
+    }
+    .card button{
+        margin-top: 10px;
+        padding: 8px 12px;
+        background: #2874f0;
+        color: #fff;
+        border:none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    .card button:hover{
+        background: #ffcc00; color:#000;
+    }
+
+    
+    footer{
+        background-color: #004080;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        margin-top: auto;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    
+    
+    footer a{
+        color: #ffcc00;
+        text-decoration: none;
+    } 
+
+</style>
+<body>
+    <header>
+        <h1>MyStore</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Search for Products, Brands and More">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <section class="categories">
+        <div>
+            <img src="https://tse2.mm.bing.net/th/id/OIP.WgLC-uqBrSqD6qRF3U8z5AHaJA?cb=thfc1falcon&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Electronics">
+            <p>Electronics</p>
+        </div>
+        <div>
+            <img src="https://i5.walmartimages.com/seo/Daqian-Baby-Girls-Clothes-Toddler-Fashion-Cute-Solid-Color-Frenulum-Vest-Top-Ripped-Jeans-Pants-Suit-Toddlers-Size-2T-5T-Clearance-Blue-2-3-Years_d8d8d574-6b93-4962-ac35-d5a4c0290a23.0f70f6b175b6b6ca0b63b8351f597562.jpeg" alt="Clothing">
+            <p>Clothing</p>
+        </div>
+        <div>
+            <img src="https://i5.walmartimages.com/asr/a8548550-8617-4ed1-8e0a-99782793682a_1.26d5d396a5c4c6cb2cc6c43688134d5e.jpeg" alt="Home">
+            <p>Home</p>
+        </div>
+    </section> 
+
+    <section class="products">
+        <div class="card">
+            <img src="https://tse4.mm.bing.net/th/id/OIP.ed-29-ckMum--DpdlJRKHgHaFW?rs=1&pid=ImgDetMain&o=7&rm=3" alt="laptop">
+             <h3>Laptop</h3>
+             <p>High-Performance laptop with SSD storage.</p>
+             <p><b>$999.99</b></p>
+             <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://i5.walmartimages.com/seo/Daqian-Baby-Girls-Clothes-Toddler-Fashion-Cute-Solid-Color-Frenulum-Vest-Top-Ripped-Jeans-Pants-Suit-Toddlers-Size-2T-5T-Clearance-Blue-2-3-Years_d8d8d574-6b93-4962-ac35-d5a4c0290a23.0f70f6b175b6b6ca0b63b8351f597562.jpeg" alt="cloth">
+             <h3>T-shirt</h3>
+             <p>Premium cotton casual wear.</p>
+             <p><b>$19.99</b></p>
+             <button>Add to Cart</button>
+        </div>
+        <div class="card">
+            <img src="https://i5.walmartimages.com/asr/a8548550-8617-4ed1-8e0a-99782793682a_1.26d5d396a5c4c6cb2cc6c43688134d5e.jpeg" alt="laptop">
+             <h3>Table Lamp</h3>
+             <p>Stylish lamp for modern homes.</p>
+             <p><b>$39.99</b></p>
+             <button>Add to Cart</button>
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; 2026 E-Commerse Catlog Project | Designed by Archana Verma</p>
+        <p>Contact: <a href="mailto:archanaverma96214@gmail.com"> archanaverma96214@gmail.com</a></p>
+    </footer>
+</body>
+</html>
